@@ -17,4 +17,17 @@ def rowYourBoat():
     print("merrily, "*4)
     print("life is but a dream")
 
-print(rowYourBoat())
+rowYourBoat()
+
+# Indexing
+
+name = "Roy G Biv"
+firstChar = name[0]
+print(firstChar)
+middleIndex = len(name) // 2
+print(middleIndex)
+print(name[middleIndex])
+print(name[-1])
+
+for i in range(len(name)):
+    print(name[i])
