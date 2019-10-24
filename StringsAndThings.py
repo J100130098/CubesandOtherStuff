@@ -42,3 +42,10 @@ print(name[6:])
 
 for i in range(1, len(name)+1):
     print(name[0:i])
+# searching inside of Strings
+
+print("Biv" in name)
+print("V" not in name)
+
+if "y" in name:
+    print("the letter y is in name")
