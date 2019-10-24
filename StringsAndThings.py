@@ -31,3 +31,14 @@ print(name[-1])
 
 for i in range(len(name)):
     print(name[i])
+
+# slicing and dicing
+# slicing operator: : makes substrings (small parts of larger strings)
+
+print(name[0:3])
+print(name[:5])
+print(name[6:9])
+print(name[6:])
+
+for i in range(1, len(name)+1):
+    print(name[0:i])
