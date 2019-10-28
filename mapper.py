@@ -1,6 +1,7 @@
 def letterToIndex(letter):
     from string import ascii_lowercase
-    alphabet = ascii_lowercase + ' '
+    from string import ascii_uppercase
+    alphabet = ascii_lowercase + ' ' + ascii_uppercase
     idx = alphabet.find(letter)
     if idx == -1:       #not found
         print("error:", letter, "is not in the alphabet")
@@ -8,7 +9,8 @@ def letterToIndex(letter):
 
 def indexToLetter(idx):
     from string import ascii_lowercase
-    alphabet = ascii_lowercase + ' '
+    from string import ascii_uppercase
+    alphabet = ascii_lowercase + ' ' + ascii_uppercase
     letter= ''
     if idx >= len(alphabet):
         print("error:", idx, "is too large")

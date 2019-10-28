@@ -68,3 +68,8 @@ if "y" in name:
 print(ord('B'))
 print(chr(97+13))
 print(str(53))
+# test functions from mapper
+from mapper import *
+
+print(letterToIndex('N'))
+print(indexToLetter(26))
