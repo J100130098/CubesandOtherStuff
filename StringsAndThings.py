@@ -71,5 +71,9 @@ print(str(53))
 # test functions from mapper
 from mapper import *
 
-print(letterToIndex('N'))
-print(indexToLetter(26))
+print(letterToIndex('P'))
+print(indexToLetter(10))
+
+from crypto import *
+
+print(scramble2Encrypt("Life is insignificant in the grand scheme of the universe"))
