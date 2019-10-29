@@ -77,3 +77,4 @@ print(indexToLetter(10))
 from crypto import *
 
 print(scramble2Encrypt("Life is insignificant in the grand scheme of the universe"))
+print(scramble2Decrypt("iei ninfcn ntegadshm fteuiesLf sisgiiati h rn ceeo h nvre"))
