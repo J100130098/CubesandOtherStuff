@@ -67,9 +67,11 @@ def stripSpaces(cipherText):
 
 # write a caesarEncrypt(plainText, shift)
 def caesarEncrypt(plainText, shift):
-    ord(plainText[1])
+    for i in range(plainText):
+        ord(i)
+    return plainText
 
 
 
-print(caesarEncrypt("Stonks", 20))
+print(caesarEncrypt("Stonks", 3))
 # write a caesarDecrypt(cipherText, shift)
