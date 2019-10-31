@@ -66,12 +66,24 @@ def stripSpaces(cipherText):
     return plainText.replace(" ", "")
 
 # write a caesarEncrypt(plainText, shift)
+alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
 def caesarEncrypt(plainText, shift):
-    for i in range(plainText):
-        ord(i)
-    return plainText
-
-
-
-print(caesarEncrypt("Stonks", 3))
+    cipherText = ""
+    for i in plainText:
+        index = alphabet.find(i)
+        nextIndex = (index + shift) % 53
+        cipherText += alphabet[nextIndex]
+    return cipherText
+print(caesarEncrypt("Stonks Are cool", 3))
 # write a caesarDecrypt(cipherText, shift)
+def caesarDecrypt(cipherText, shift):
+    word = ""
+    for i in cipherText:
+        index = alphabet.find(i)
+        nextIndex = (index - shift);
+        if nextIndex < 0:
+            nextIndex = 53 + nextIndex
+        word += alphabet[nextIndex]
+    return word
+
+print(caesarDecrypt("VWRQNVcDuhcfrro", 3))
