@@ -66,12 +66,15 @@ def stripSpaces(cipherText):
     return plainText.replace(" ", "")
 
 # write a caesarEncrypt(plainText, shift)
-alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 def caesarEncrypt(plainText, shift):
     cipherText = ""
     for i in plainText:
+        # find each individual letter in the alphabet and convert it to a number value
         index = alphabet.find(i)
+        # shift each letter corresponding to the shift, in this case three over
         nextIndex = (index + shift) % 53
+        # convert the numbers back to letters
         cipherText += alphabet[nextIndex]
     return cipherText
 print(caesarEncrypt("Stonks Are cool", 3))
@@ -80,9 +83,11 @@ def caesarDecrypt(cipherText, shift):
     word = ""
     for i in cipherText:
         index = alphabet.find(i)
+        # remove the shift made in the previous set of code
         nextIndex = (index - shift);
+        # the if statement allows for spaces to be added back to the text
         if nextIndex < 0:
-            nextIndex = 53 + nextIndex
+            nextIndex = 27 + nextIndex
         word += alphabet[nextIndex]
     return word
 
